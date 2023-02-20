@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Actions Webpage</title>
+    <style>
+      button {
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Hello, World!</h1>
+
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeColor()">Change Color</button>
+    <button onclick="removeTag()">Remove Tag</button>
+    <button onmouseover="insertTag()">Insert Tag(Mouse Over)</button>
+
+    <script>
+      function changeText() {
+        document.getElementById("heading").innerHTML =
+          "JavaScript Actions Webpage";
+      }
+
+      function changeColor() {
+        document.getElementById("heading").style.color = "red";
+      }
+
+      function removeTag() {
+        var tag = document.getElementById("heading");
+        tag.parentNode.removeChild(tag);
+      }
+
+      function insertTag() {
+        var newHeading = document.createElement("h1");
+        var textNode = document.createTextNode("New Heading");
+        newHeading.appendChild(textNode);
+        document.body.appendChild(newHeading);
+      }
+    </script>
+  </body>
+</html>
