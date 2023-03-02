@@ -1,0 +1,17 @@
+-- Create the database
+CREATE DATABASE myformdb;
+
+-- Create the table
+USE myformdb;
+
+CREATE TABLE myformtable (
+	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(50) NOT NULL,
+	email VARCHAR(50) NOT NULL,
+	textarea TEXT NOT NULL,
+	checkbox ENUM('yes','no') NOT NULL,
+	multiple VARCHAR(50) NOT NULL,
+	radio VARCHAR(50) NOT NULL,
+	listbox VARCHAR(50) NOT NULL,
+	password VARCHAR(50) NOT NULL
+);
